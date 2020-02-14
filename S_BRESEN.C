@@ -10,10 +10,8 @@ int gd=DETECT,gm;
 
 clrscr();
 initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
-printf("\nEnter the co-ordinates of 1st point : ");
-scanf("%d %d",&x1,&y1);
-printf("\nEnter the co-ordinates of 2nd point : ");
-scanf("%d %d",&x2,&y2);
+x1=y1=50;
+y1=y2=100;
 
 dx = (x2 - x1);
 dy = (y2 - y1);

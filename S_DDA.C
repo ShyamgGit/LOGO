@@ -5,34 +5,37 @@
 
 void main( )
 {
-	float x,y,x1,y1,x2,y2,dx,dy,step;
+	float x,y,x1,y1,x2,y2,dx,dy,p;
 	int i,gd=DETECT,gm;
-
+	 x1=50;
+	 y1=75;
+	 x2=100;
+	 y2=120;
 	initgraph(&gd,&gm,"c:\\turboc3\\bgi");
 
-	printf("Enter the value of x1 and y1 : ");
-	scanf("%f%f",&x1,&y1);
-	printf("Enter the value of x2 and y2: ");
-	scanf("%f%f",&x2,&y2);
+	printf("Starting co-ordinate : (%f,%f)\n",x1,y1);
+
+	printf("Ending co-ordinate : (%f,%f)\n",x2,y2);
+
 
 	dx=abs(x2-x1);
 	dy=abs(y2-y1);
 
 	if(dx>=dy)
-		step=dx;
+		p=dx;
 	else
-		step=dy;
+		p=dy;
 
-	dx=dx/step;
-	dy=dy/step;
+	dx=dx/p;
+	dy=dy/p;
 
 	x=x1;
 	y=y1;
 
 	i=1;
-	while(i<=step)
+	while(i<=p)
 	{
-		putpixel(x,y,5);
+		putpixel(x,y,3);
 		x=x+dx;
 		y=y+dy;
 		i=i+1;
